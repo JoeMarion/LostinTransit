@@ -1,0 +1,22 @@
+!!!
+%html
+%head
+  %title Lost in Transit
+
+  // Stylesheets
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+  = yield :stylesheet
+
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  = csrf_meta_tags
+  %link{:rel => "stylesheet", :href => "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"}/
+%body
+  .important-announcements
+
+  .sidebar-container
+    = render 'layouts/sidebar'
+
+  .content-container
+    .navigation
+      %a{:href => root_path} Home
+    = yield
