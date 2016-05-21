@@ -30,13 +30,15 @@ gem 'normalize-rails'
 
 
 group :test do
-  gem 'simplecov', :require => false, :group => :test
-  gem 'factory_girl_rails', :require => false, :group => :test
-  gem 'database_cleaner'
-  gem 'rspec-rails'
-  gem 'capybara'
-  gem 'selenium-webdriver'
-  gem 'chromedriver-helper'
+  gem "capybara"
+  gem "connection_pool"
+  gem "launchy"
+  gem "minitest-reporters"
+  gem "mocha"
+  gem "poltergeist"
+  gem "shoulda-context"
+  gem "shoulda-matchers", ">= 3.0.1"
+  gem "test_after_commit"
 end
 
 group :development, :test do
@@ -45,8 +47,11 @@ end
 
 group :development do
   gem 'web-console', '~> 2.0'
-
   gem 'spring'
+  gem "guard", ">= 2.2.2", :require => false
+  gem "guard-minitest", :require => false
+  gem "rb-fsevent", :require => false
+  gem "terminal-notifier-guard", :require => false
 end
 
 group :production do
