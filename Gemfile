@@ -9,7 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'devise'
+gem 'bcrypt'
 gem 'susy'
 gem 'breakpoint'
 gem 'compass-rails'
@@ -31,6 +31,7 @@ gem 'normalize-rails'
 
 group :test do
   gem "capybara"
+  gem "selenium-webdriver"
   gem "connection_pool"
   gem "launchy"
   gem "minitest-reporters"

@@ -2,11 +2,18 @@
   %h1.main-title Lost in Transit
 
 .welcome.side-header
-  %h3.title WELCOME GUEST
+  - if logged_in?
+    %h3.title= "Welcome, #{current_user.first_name}"
+  - else
+    %h3.title WELCOME GUEST
 
 .user-actions
-  %a{:href => "#", class: "links"} Create Account
-  %a{:href => "#", class: "links"} Sign In
+  - if logged_in?
+    = link_to "Profile", user_path(current_user), class: "links"
+    = link_to "Log out", logout_path, method: "delete", class: "links"
+  - else
+    = link_to "Create Account", signup_path, class: "links"
+    = link_to "Sign In", login_path, class: "links"
 
 .navigation.side-header
   %h3.title NAVIGATION
