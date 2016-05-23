@@ -5,3 +5,12 @@ joe:
   email: Joe@example.com
   birthday: 01-01-2000
   password_digest: <%= User.digest('password') %>
+  admin: true
+
+archer:
+  first_name: Sterling
+  last_name: Archer
+  username: SexySpy123
+  email: duchess@example.gov
+  birthday: 01-01-2000
+  password_digest: <%= User.digest('password') %>
