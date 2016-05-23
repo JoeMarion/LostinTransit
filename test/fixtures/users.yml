@@ -6,6 +6,8 @@ joe:
   birthday: 01-01-2000
   password_digest: <%= User.digest('password') %>
   admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 archer:
   first_name: Sterling
@@ -14,3 +16,5 @@ archer:
   email: duchess@example.gov
   birthday: 01-01-2000
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
