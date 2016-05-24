@@ -23,8 +23,6 @@ Rails.application.routes.draw do
   resources :password_resets, only: [:new, :create, :edit, :update]
 
   resources :forums, only: [:index] do
-    resources :topics do
-      resources :posts
-    end
+    resources :topics
   end
 end

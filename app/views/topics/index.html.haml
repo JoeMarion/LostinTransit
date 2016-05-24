@@ -1,2 +1,5 @@
+= link_to "New Topic", new_forum_topic_path
+
 - @topics.each do |t|
-  = t.title
+  .topic
+    = t.title
