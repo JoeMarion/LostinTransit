@@ -2,11 +2,16 @@
 = content_for :stylesheet, stylesheet_link_tag("forums")
 
 .forums-container
-  .forum-header
-    %h1 Announcements
 
-  .forum-header
-    %h1 General Transit
+  -# List out available forums.
+  - @forums.each do |forum|
+    - if !@categories.include? forum.section # Check if the category has a header
+      .forum-header
+        %h1= forum.section
+      .forum
+        = link_to forum.category, forum_path(forum)
+      - @categories << forum.section
+    - else
+      .forum
+        = link_to forum.category, forum_path(forum)
 
-  .forum-header
-    %h1 Off Topic

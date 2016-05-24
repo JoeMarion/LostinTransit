@@ -16,9 +16,9 @@ end
 
 # Forum Creation
 
-Forum.create!(category: "News & Announcements")
-Forum.create!(category: "Raffles & Giveaways")
-Forum.create!(category: "Transit Build")
-Forum.create!(category: "Show off your build")
-Forum.create!(category: "Chat")
-Forum.create!(category: "Site Input")
+Forum.create!(category: "News & Announcements", section: "Announcements")
+Forum.create!(category: "Raffles & Giveaways", section: "Announcements")
+Forum.create!(category: "Transit Build", section: "General Transit")
+Forum.create!(category: "Show off your build", section: "General Transit")
+Forum.create!(category: "Chat", section: "Off Topic")
+Forum.create!(category: "Site Input", section: "Off Topic")
