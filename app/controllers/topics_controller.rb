@@ -1,7 +1,7 @@
 class TopicsController < ApplicationController
   before_action :logged_in_user, only: [:new, :create, :edit, :update, :destroy]
   before_action :get_user,       only: [:new, :create, :edit, :update]
-  before_action :get_forum,      only: [:new, :create]
+  before_action :get_forum,      only: [:new, :create, :show]
 
   def index
     @topics = Topic.where(forum_id: params[:forum_id]).order("created_at DESC")

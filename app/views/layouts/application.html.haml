@@ -1,7 +1,7 @@
 !!!
 %html
 %head
-  %title Lost in Transit
+  %title= "#{yield(:title)} | Lost in Transit"
 
   // Stylesheets
   = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
@@ -18,7 +18,8 @@
 
   .content-container
     .navigation
-      %a{:href => root_path} Home
+      = link_to "Home", root_path
+      = yield :navigation
     .flash-messages
       - flash.each do |message_type, message|
         %div{class: "alert alert-#{message_type}"}= message
