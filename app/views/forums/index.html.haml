@@ -9,9 +9,9 @@
       .forum-header
         %h1= forum.section
       .forum
-        = link_to forum.category, forum_path(forum)
+        = link_to forum.category, forum_topics_path(forum)
       - @categories << forum.section
     - else
       .forum
-        = link_to forum.category, forum_path(forum)
+        = link_to forum.category, forum_topics_path(forum)
 
